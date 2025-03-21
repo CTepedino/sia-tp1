@@ -11,32 +11,19 @@ BACKGROUND_COLOR = (200, 200, 200)
 TEXT_COLOR = (255, 255, 255)
 
 class Sokoban:
-    def __init__(self):
-        self.levels = [
-            [
-                "######",
-                "#P   #",
-                "# B T#",
-                "######"
-            ],
-            [
-                "#######",
-                "#P    #",
-                "# B T #",
-                "#  B T#",
-                "#######"
-            ]
-        ]
+    def __init__(self, level,current_level):
+        self.levels = level  # Usamos el nivel pasado al constructor
         self.width = len(self.levels[0][0])
         self.height = len(self.levels[0])
-        self.load_level()
+        self.load_level(current_level)  # Inicializamos con el primer nivel
 
-    def load_level(self):
+    def load_level(self, level_index):
         self.player_pos = None
         self.boxes = set()
         self.targets = set()
         self.walls = set()
-        for y, row in enumerate(self.levels[0]):  # Cambiado: asegurarse de cargar el primer nivel
+        level = self.levels[level_index]
+        for y, row in enumerate(level):
             for x, cell in enumerate(row):
                 if cell == "P":
                     self.player_pos = (x, y)
@@ -110,7 +97,7 @@ class Sokoban:
                         self.move(1, 0)
                     elif event.key == K_n and self.is_solved():
                         current_level = (current_level + 1) % len(self.levels)
-                        self.load_level()  # Recargar el nivel con el nuevo índice
+                        self.load_level(current_level)  # Recargar el nivel con el nuevo índice
                         game_won = False  # Resetea el estado de "ganado"
 
             if self.is_solved() and not game_won:
@@ -123,8 +110,23 @@ class Sokoban:
         pygame.quit()
 
 def main():
-    game = Sokoban()
-    game.start(0)  # Llamamos a la función `start` pasando el nivel 0 al iniciar
+    levels = [
+        [
+            "######",
+            "#P   #",
+            "# B T#",
+            "######"
+        ],
+        [
+            "#######",
+            "#P    #",
+            "# B T #",
+            "#  B T#",
+            "#######"
+        ]
+    ]
+    game = Sokoban(levels,1)  # Pasamos los niveles al constructor
+    game.start(1)  # Llamamos a la función `start` pasando el nivel 0 al iniciar
 
 if __name__ == "__main__":
     main()
