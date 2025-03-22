@@ -125,8 +125,8 @@ def main():
             "#######"
         ]
     ]
-    game = Sokoban(levels,1)  # Pasamos los niveles al constructor
-    game.start(1)  # Llamamos a la función `start` pasando el nivel 0 al iniciar
+    game = Sokoban(levels,0)  # Pasamos los niveles al constructor
+    game.start(0)  # Llamamos a la función `start` pasando el nivel 0 al iniciar
 
 if __name__ == "__main__":
     main()
