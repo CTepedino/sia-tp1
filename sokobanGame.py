@@ -63,6 +63,7 @@ class Sokoban:
 
     def start(self):
         pygame.init()
+        pygame.display.set_caption("Sokoban")
         self.screen = pygame.display.set_mode((self.width * TILE_SIZE, self.height * TILE_SIZE))
 
         self.wall_texture = pygame.transform.scale(self.wall_texture, (TILE_SIZE, TILE_SIZE))
