@@ -4,5 +4,6 @@
             "#P   #",
             "# B T#",
             "######"
-        ]
+        ],
+  "heuristic": "misplaced_boxes"
 }

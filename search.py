@@ -1,5 +1,5 @@
 from sokobanRules import SokobanRules, Directions
-from collections import deque
+from frontierSets import deque
 import heapq
 import time
 import json
