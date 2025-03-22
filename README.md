@@ -24,6 +24,10 @@ para instalar las dependencias necesarias en el ambiente virtual
 
 ## Ejecución
 
+Parado en la carpeta del tp1 ejecutar
+
 ```
-pipenv run python [query_script] [config_file]
+pipenv run python sokobanGame.py [configFile]
 ```
+
+Para correr el juego de Sokoban
