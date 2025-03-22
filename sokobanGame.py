@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-
+import time
 import sys
 import json
 from sokobanRules import SokobanRules, Directions
@@ -110,6 +110,51 @@ class Sokoban:
 
         pygame.quit()
 
+
+    def automatic_start(self, solution):
+        pygame.init()
+        pygame.display.set_caption("Sokoban")
+        self.screen = pygame.display.set_mode((self.width * TILE_SIZE, self.height * TILE_SIZE))
+
+        self.wall_texture = pygame.transform.scale(self.wall_texture, (TILE_SIZE, TILE_SIZE))
+        self.box_texture = pygame.transform.scale(self.box_texture, (TILE_SIZE, TILE_SIZE))
+        self.target_texture = pygame.transform.scale(self.target_texture, (TILE_SIZE, TILE_SIZE))
+        self.background_texture = pygame.transform.scale(self.background_texture, (TILE_SIZE, TILE_SIZE))
+
+        self.player_textures[Directions.UP] = pygame.transform.scale(self.player_textures[Directions.UP], (TILE_SIZE, TILE_SIZE))
+        self.player_textures[Directions.DOWN] = pygame.transform.scale(self.player_textures[Directions.DOWN], (TILE_SIZE, TILE_SIZE))
+        self.player_textures[Directions.LEFT] = pygame.transform.scale(self.player_textures[Directions.LEFT],(TILE_SIZE, TILE_SIZE))
+        self.player_textures[Directions.RIGHT] = pygame.transform.scale(self.player_textures[Directions.RIGHT], (TILE_SIZE, TILE_SIZE))
+        self.player_textures[Directions.RIGHT] = pygame.transform.flip(self.player_textures[Directions.RIGHT], True, False)
+
+        clock = pygame.time.Clock()
+        self.font = pygame.font.SysFont("Arial", 48, bold=True)
+        running = True
+
+        solved = self.game.is_solved()
+
+        # while running:
+        for movimiento in solution:
+                    if movimiento == "up":
+                        self.last_move = Directions.UP
+                    if movimiento == "down":
+                        self.last_move = Directions.DOWN
+                    if movimiento == "left":
+                        self.last_move = Directions.LEFT
+                    if movimiento == "right":
+                        self.last_move = Directions.RIGHT
+                    time.sleep(0.5)
+                    self.game.move_to(self.last_move)
+                    solved = self.game.is_solved()
+
+                    self.draw(solved)
+                    pygame.display.flip()
+        clock.tick(30)
+
+        pygame.quit()
+
+
+                   
 
 
 if __name__ == "__main__":

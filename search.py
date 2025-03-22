@@ -2,6 +2,7 @@ from sokobanRules import SokobanRules, Directions
 from collections import deque
 import heapq
 import time
+import json
 
     
 def bfs(level):
@@ -318,5 +319,20 @@ if __name__ == "__main__":
     print(f"Cantidad de nodos expandidos: {expanded}")
     print(f"Cantidad de nodos frontera: {frontier}")
     print(f"Tiempo de procesamiento: {(end - start):.2f} segundos")
+
+    result = {
+        "solution": [direction.value for direction in solution], 
+        "cost": len(solution),  
+        "expanded_nodes": expanded,  
+        "frontier_nodes": frontier,
+        "level": level,
+        "current_level":1
+    }
+
+
+    with open("result.json", "w") as file:
+        json.dump(result, file, indent=4)
+
+    print("Resultados guardados en 'result.json'")
 
 
