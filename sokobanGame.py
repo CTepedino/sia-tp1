@@ -1,6 +1,8 @@
 import pygame
 from pygame.locals import *
 
+import sys
+import json
 from sokobanRules import SokobanRules, Directions
 
 
@@ -105,12 +107,9 @@ class Sokoban:
 
 
 if __name__ == "__main__":
+    with open(sys.argv[1]) as f:
+        config = json.load(f)
+        level = config["level"]
 
-    level = ([
-        "######",
-        "#P   #",
-        "# B T#",
-        "######"
-    ])
     game = Sokoban(level)
     game.start()
