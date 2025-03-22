@@ -23,6 +23,7 @@ PLAYER_SIDE = "assets/CharacterSIDE.png"
 
 class Sokoban:
     def __init__(self, level):
+        self.level = level
         self.game = SokobanRules(level)
         self.width = len(level[0])
         self.height = len(level)
@@ -63,6 +64,10 @@ class Sokoban:
             self.screen.blit(shadow_text, (self.screen.get_width() // 2 - win_text.get_width() // 2 + 3, self.screen.get_height() // 2 - win_text.get_height() // 2 + 3))
             self.screen.blit(win_text, (self.screen.get_width() // 2 - win_text.get_width() // 2, self.screen.get_height() // 2 - win_text.get_height() // 2))
 
+    def reset(self):
+        self.game = SokobanRules(level)
+        self.last_move = Directions.DOWN
+
     def start(self):
         pygame.init()
         pygame.display.set_caption("Sokoban")
@@ -94,6 +99,7 @@ class Sokoban:
                     elif event.key in (K_DOWN, K_s): self.last_move = Directions.DOWN
                     elif event.key in (K_LEFT, K_a): self.last_move = Directions.LEFT
                     elif event.key in (K_RIGHT, K_d): self.last_move = Directions.RIGHT
+                    if event.key == K_r: self.reset()
 
                     self.game.move_to(self.last_move)
                     solved = self.game.is_solved()
