@@ -3,6 +3,7 @@ from pygame.locals import *
 import time
 import sys
 import json
+
 from sokobanRules import SokobanRules, Directions
 
 
@@ -15,6 +16,7 @@ WIN_TEXT = "¡Ganaste!"
 GROUND_TEXTURE = "assets/Ground_Concrete.png"
 WALL_TEXTURE = "assets/Wall_Black.png"
 BOX_TEXTURE = "assets/Crate_Brown.png"
+BOX_IN_TARGET_TEXTURE = "assets/Crate_Beige.png"
 TARGET_TEXTURE = "assets/EndPoint_Red.png"
 
 PLAYER_UP = "assets/CharacterUP.png"
@@ -32,6 +34,7 @@ class Sokoban:
 
         self.wall_texture = pygame.image.load(WALL_TEXTURE)
         self.box_texture = pygame.image.load(BOX_TEXTURE)
+        self.box_in_target_texture = pygame.image.load(BOX_IN_TARGET_TEXTURE)
         self.target_texture = pygame.image.load(TARGET_TEXTURE)
         self.background_texture = pygame.image.load(GROUND_TEXTURE)
 
@@ -53,7 +56,10 @@ class Sokoban:
         for x, y in self.game.targets:
             self.screen.blit(self.target_texture, (x * TILE_SIZE, y * TILE_SIZE))
         for x, y in self.game.boxes:
-            self.screen.blit(self.box_texture, (x * TILE_SIZE, y * TILE_SIZE))
+            if (x, y) in self.game.targets:
+                self.screen.blit(self.box_in_target_texture, (x * TILE_SIZE, y * TILE_SIZE))
+            else:
+                self.screen.blit(self.box_texture, (x * TILE_SIZE, y * TILE_SIZE))
 
         px, py = self.game.player
         self.screen.blit(self.player_textures[self.last_move], (px * TILE_SIZE, py * TILE_SIZE))
@@ -68,13 +74,14 @@ class Sokoban:
         self.game = SokobanRules(level)
         self.last_move = Directions.DOWN
 
-    def start(self):
+    def setup(self):
         pygame.init()
         pygame.display.set_caption("Sokoban")
         self.screen = pygame.display.set_mode((self.width * TILE_SIZE, self.height * TILE_SIZE))
 
         self.wall_texture = pygame.transform.scale(self.wall_texture, (TILE_SIZE, TILE_SIZE))
         self.box_texture = pygame.transform.scale(self.box_texture, (TILE_SIZE, TILE_SIZE))
+        self.box_in_target_texture = pygame.transform.scale(self.box_in_target_texture, (TILE_SIZE, TILE_SIZE))
         self.target_texture = pygame.transform.scale(self.target_texture, (TILE_SIZE, TILE_SIZE))
         self.background_texture = pygame.transform.scale(self.background_texture, (TILE_SIZE, TILE_SIZE))
 
@@ -84,8 +91,11 @@ class Sokoban:
         self.player_textures[Directions.RIGHT] = pygame.transform.scale(self.player_textures[Directions.RIGHT], (TILE_SIZE, TILE_SIZE))
         self.player_textures[Directions.RIGHT] = pygame.transform.flip(self.player_textures[Directions.RIGHT], True, False)
 
-        clock = pygame.time.Clock()
         self.font = pygame.font.SysFont("Arial", 48, bold=True)
+    def start(self):
+        self.setup()
+
+        clock = pygame.time.Clock()
         running = True
 
         solved = self.game.is_solved()
@@ -111,45 +121,41 @@ class Sokoban:
         pygame.quit()
 
 
-    def automatic_start(self, solution):
-        pygame.init()
-        pygame.display.set_caption("Sokoban")
-        self.screen = pygame.display.set_mode((self.width * TILE_SIZE, self.height * TILE_SIZE))
-
-        self.wall_texture = pygame.transform.scale(self.wall_texture, (TILE_SIZE, TILE_SIZE))
-        self.box_texture = pygame.transform.scale(self.box_texture, (TILE_SIZE, TILE_SIZE))
-        self.target_texture = pygame.transform.scale(self.target_texture, (TILE_SIZE, TILE_SIZE))
-        self.background_texture = pygame.transform.scale(self.background_texture, (TILE_SIZE, TILE_SIZE))
-
-        self.player_textures[Directions.UP] = pygame.transform.scale(self.player_textures[Directions.UP], (TILE_SIZE, TILE_SIZE))
-        self.player_textures[Directions.DOWN] = pygame.transform.scale(self.player_textures[Directions.DOWN], (TILE_SIZE, TILE_SIZE))
-        self.player_textures[Directions.LEFT] = pygame.transform.scale(self.player_textures[Directions.LEFT],(TILE_SIZE, TILE_SIZE))
-        self.player_textures[Directions.RIGHT] = pygame.transform.scale(self.player_textures[Directions.RIGHT], (TILE_SIZE, TILE_SIZE))
-        self.player_textures[Directions.RIGHT] = pygame.transform.flip(self.player_textures[Directions.RIGHT], True, False)
+    def automatic_game(self, solution):
+        self.setup()
 
         clock = pygame.time.Clock()
-        self.font = pygame.font.SysFont("Arial", 48, bold=True)
+
+        self.draw(False)
+        pygame.display.flip()
+
         running = True
+        moves_iter = iter(solution)
+        has_moves = True
 
-        solved = self.game.is_solved()
+        while running:
 
-        # while running:
-        for movimiento in solution:
-                    if movimiento == "up":
-                        self.last_move = Directions.UP
-                    if movimiento == "down":
-                        self.last_move = Directions.DOWN
-                    if movimiento == "left":
-                        self.last_move = Directions.LEFT
-                    if movimiento == "right":
-                        self.last_move = Directions.RIGHT
+            for event in pygame.event.get():
+                if event.type == QUIT:
+                    running = False
+                    break
+                elif event.type == KEYDOWN and event.key == K_ESCAPE:
+                    running = False
+                    break
+
+            if has_moves:
+                try:
+                    move = next(moves_iter)
                     time.sleep(0.5)
+                    self.last_move = Directions(move)
                     self.game.move_to(self.last_move)
-                    solved = self.game.is_solved()
 
-                    self.draw(solved)
-                    pygame.display.flip()
-        clock.tick(30)
+                except StopIteration:
+                    has_moves = False
+
+            self.draw(self.game.is_solved())
+            pygame.display.flip()
+            clock.tick(30)
 
         pygame.quit()
 
