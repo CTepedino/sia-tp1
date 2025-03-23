@@ -39,7 +39,6 @@ def search(level, frontier: Collection):
         nodes_expanded += 1
         explored.add(current_node)
         for direction in current_node.get_valid_moves():
-
             game.load_state(current_node)
             game.move_to(direction)
 
