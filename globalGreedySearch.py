@@ -15,10 +15,12 @@ if __name__ == "__main__":
         level = config["level"]
         heuristic = heuristics[config["heuristic"]]
 
-    for line in level:
-        print(line)
+    if len(sys.argv) > 2:
+        out_path = sys.argv[2]
+    else:
+        out_path = f"greedy_{config['heuristic']}_results.json"
 
-    path = greedy(level, heuristic)
-    print([direction.value for direction in path])
+    results = greedy(level, heuristic)
 
-
+    with open(out_path, "w") as f:
+        json.dump(results.to_dict(), f, ensure_ascii=False, indent=4)

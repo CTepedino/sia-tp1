@@ -7,5 +7,6 @@
     "#   #P #",
     "#  B T #",
     "########"
-    ]
+    ],
+    "heuristic": "manhattan_distance_sum"
 }

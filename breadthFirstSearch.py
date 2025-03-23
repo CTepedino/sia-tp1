@@ -13,10 +13,14 @@ if __name__ == "__main__":
 
         level = config["level"]
 
-    for line in level:
-        print(line)
+    if len(sys.argv) > 2:
+        out_path = sys.argv[2]
+    else:
+        out_path = "bfs_results.json"
 
-    path = bfs(level)
-    print([direction.value for direction in path])
+    results = bfs(level)
+
+    with open(out_path, "w") as f:
+        json.dump(results.to_dict(), f, ensure_ascii=False, indent=4)
 
 

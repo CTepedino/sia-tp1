@@ -1,8 +1,30 @@
-from frontierSets import Collection, Queue, Stack
-from sokobanRules import SokobanRules
+import time
+
+from frontierSets import Collection
+from sokobanRules import SokobanRules, Directions
+
+class SearchResults:
+    def __init__(self, level: [str], path: [Directions], nodes_expanded: int, nodes_in_frontier: int, time: float):
+        self.level = level
+        self.solution = path
+        self.nodes_expanded = nodes_expanded
+        self.nodes_in_frontier = nodes_in_frontier
+        self.time = f"{time:.2f}s"
+
+    def to_dict(self):
+        return {
+            "level": self.level,
+            "solved": True if self.solution else False,
+            "solution": [direction.value for direction in self.solution],
+            "cost": len(self.solution),
+            "nodes_expanded": self.nodes_expanded,
+            "nodes_in_frontier": self.nodes_in_frontier,
+            "time": self.time
+        }
 
 
 def search(level, frontier: Collection):
+    start_time = time.time()
     game = SokobanRules(level)
     current_node = game.copy_state()
 
@@ -10,9 +32,9 @@ def search(level, frontier: Collection):
     nodes_expanded = 0
 
     while current_node is not None:
-
         if current_node.is_solved():
-            return current_node.path
+            end_time = time.time()
+            return SearchResults(level, current_node.path, nodes_expanded, len(frontier), end_time - start_time)
 
         nodes_expanded += 1
         explored.add(current_node)
@@ -29,23 +51,5 @@ def search(level, frontier: Collection):
 
         current_node = frontier.next()
 
-    return None
-
-def bfs(level):
-    return search(level, Queue())
-
-def dfs(level):
-    return search(level, Stack())
-
-if __name__ == "__main__":
-    level = [
-        "#######",
-        "#P    #",
-        "# B T #",
-        "#######"
-    ]
-    solution = bfs(level)
-    print(solution)
-
-    solution = dfs(level)
-    print(solution)
+    end_time = time.time()
+    return SearchResults(level, None, nodes_expanded, len(frontier), end_time - start_time)

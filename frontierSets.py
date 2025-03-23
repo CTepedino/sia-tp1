@@ -1,9 +1,6 @@
 import heapq
 from abc import ABC, abstractmethod
 from collections import deque
-from typing import Callable
-
-from sokobanRules import GameState
 
 
 class Collection(ABC):
@@ -13,6 +10,10 @@ class Collection(ABC):
 
     @abstractmethod
     def next(self):
+        pass
+
+    @abstractmethod
+    def __len__(self):
         pass
 
 class Queue(Collection):
@@ -25,6 +26,10 @@ class Queue(Collection):
     def next(self):
         return self.items.popleft() if self.items else None
 
+    def __len__(self):
+        return len(self.items)
+
+
 class Stack(Collection):
     def __init__(self):
         self.items = deque()
@@ -34,6 +39,10 @@ class Stack(Collection):
 
     def next(self):
         return self.items.pop() if self.items else None
+
+    def __len__(self):
+        return len(self.items)
+
 
 class Sorted(Collection):
     def __init__(self, key=lambda x: x):
@@ -47,3 +56,5 @@ class Sorted(Collection):
     def next(self):
         return heapq.heappop(self.items)[2] if self.items else None
 
+    def __len__(self):
+        return len(self.items)

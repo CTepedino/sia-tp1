@@ -105,11 +105,14 @@ class Sokoban:
                 if event.type == QUIT:
                     running = False
                 elif event.type == KEYDOWN and not solved:
+                    if event.key == K_r:
+                        self.reset()
+                        break
                     if event.key in (K_UP, K_w): self.last_move = Directions.UP
                     elif event.key in (K_DOWN, K_s): self.last_move = Directions.DOWN
                     elif event.key in (K_LEFT, K_a): self.last_move = Directions.LEFT
                     elif event.key in (K_RIGHT, K_d): self.last_move = Directions.RIGHT
-                    if event.key == K_r: self.reset()
+
 
                     self.game.move_to(self.last_move)
                     solved = self.game.is_solved()

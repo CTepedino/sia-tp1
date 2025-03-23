@@ -2,10 +2,10 @@ import enum
 from copy import copy
 
 class Directions(enum.Enum):
-    UP = "up"
-    DOWN = "down"
-    LEFT = "left"
-    RIGHT = "right"
+    UP = "Up"
+    DOWN = "Down"
+    LEFT = "Left"
+    RIGHT = "Right"
 
 class GameState:
     def __init__(self, player, boxes, walls, targets, path_from_start: [Directions]):
