@@ -46,8 +46,6 @@ def search(level, frontier: Collection):
             if new_state not in explored:
                 frontier.add(new_state)
 
-
-
         current_node = frontier.next()
 
     end_time = time.time()

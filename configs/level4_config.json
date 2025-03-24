@@ -1,0 +1,13 @@
+{
+    "level": [
+      "#######",
+      "###P T#",
+      "# B #T#",
+      "#  BB #",
+      "#T  # #",
+      "#   BT#",
+      "#######"
+    ],
+    "heuristic": "walled_distance_sum",
+    "depth_iteration": 2
+}

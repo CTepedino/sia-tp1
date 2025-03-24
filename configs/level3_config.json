@@ -8,6 +8,6 @@
     "#  B T #",
     "########"
     ],
-    "heuristic": "manhattan_distance_sum",
+    "heuristic": "walled_distance_sum",
     "depth_iteration": 2
 }
