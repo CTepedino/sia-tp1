@@ -10,6 +10,7 @@ def heuristic_plus_cost(heuristic):
     def f(state: GameState):
         h = heuristic(state)
         g = len(state.path)
+        #print(f"\t{(g+h, h)} - {state}")
         return g + h, h
 
     return f

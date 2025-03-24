@@ -32,6 +32,7 @@ def search(level, frontier: Collection):
     nodes_expanded = 0
 
     while current_node is not None:
+        #print(current_node)
         if current_node.is_solved():
             end_time = time.time()
             return SearchResults(level, current_node.path, nodes_expanded, len(frontier), end_time - start_time)

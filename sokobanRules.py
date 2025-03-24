@@ -56,6 +56,7 @@ class SokobanRules:
         self.walls = set()
         self.player = None
         self.path = []
+
         for y, row in enumerate(level):
             for x, cell in enumerate(row):
                 match cell:

@@ -67,8 +67,14 @@ class Sokoban:
         if solved:
             win_text = self.font.render(WIN_TEXT, True, TEXT_COLOR)
             shadow_text = self.font.render(WIN_TEXT, True, SHADOW_COLOR)
-            self.screen.blit(shadow_text, (self.screen.get_width() // 2 - win_text.get_width() // 2 + 3, self.screen.get_height() // 2 - win_text.get_height() // 2 + 3))
-            self.screen.blit(win_text, (self.screen.get_width() // 2 - win_text.get_width() // 2, self.screen.get_height() // 2 - win_text.get_height() // 2))
+            self.screen.blit(shadow_text, (self.screen.get_width() // 2 - win_text.get_width() // 2 + 3, self.screen.get_height() // 2 - win_text.get_height() // 2 - 20 + 3))
+            self.screen.blit(win_text, (self.screen.get_width() // 2 - win_text.get_width() // 2, self.screen.get_height() // 2 - win_text.get_height() // 2 -20))
+
+            moves_font = pygame.font.Font(None, 30)
+            moves_text = moves_font.render(f"Movimientos: {len(self.game.path)}", True, TEXT_COLOR)
+            moves_shadow_text = moves_font.render(f"Movimientos: {len(self.game.path)}", True, SHADOW_COLOR)
+            self.screen.blit(moves_shadow_text, (self.screen.get_width() // 2 - moves_text.get_width() // 2 + 3, self.screen.get_height() // 2 - moves_text.get_height() // 2 + 40  + 3))
+            self.screen.blit(moves_text, (self.screen.get_width() // 2 - moves_text.get_width() // 2, self.screen.get_height() // 2 - moves_text.get_height() // 2 + 40))
 
     def reset(self):
         self.game = SokobanRules(level)

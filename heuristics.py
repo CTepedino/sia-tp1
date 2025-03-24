@@ -10,10 +10,18 @@ def misplaced_boxes(state: GameState):
                for box in state.boxes
                if box not in state.targets)
 
-def manhattan_distance_to_nearest_target(box, state: GameState):
 
-    return min(abs(box[0] - target[0]) + abs(box[1] - target[1])
+calculated_manhattan_distances = {}
+
+def manhattan_distance_to_nearest_target(box, state: GameState):
+    if box in calculated_manhattan_distances:
+        return calculated_manhattan_distances[box]
+
+    distance =  min(abs(box[0] - target[0]) + abs(box[1] - target[1])
         for target in state.targets)
+    calculated_manhattan_distances[box] = distance
+    return distance
+
 
 def manhattan_distance_sum(state: GameState):
     return sum(manhattan_distance_to_nearest_target(box, state)
@@ -61,7 +69,7 @@ def walled_distance(box, state: GameState):
                 dist = result + (path_len - i)
                 if space not in calculated_walled_distances or dist < calculated_walled_distances[space]:
                     calculated_walled_distances[space] = dist
-            return result
+            return result + path_len
 
         if current_space["space"] in state.targets:
             calculated_walled_distances[current_space["space"]] = 0
@@ -70,7 +78,7 @@ def walled_distance(box, state: GameState):
                 dist = path_len - i
                 if space not in calculated_walled_distances or dist < calculated_walled_distances[space]:
                     calculated_walled_distances[space] = dist
-            return len(current_space["path"])
+            return path_len
 
         for direction in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             new_space = {
@@ -106,7 +114,7 @@ heuristics = {
     "walled_distance_sum": walled_distance_sum,
 
     "not_cornered": not_cornered,
-    "manhattan_and_not_cornered": combine(not_cornered, manhattan_distance_sum),
+    "manhattan_distance_sum_and_not_cornered": combine(not_cornered, manhattan_distance_sum),
     "nearest_box_and_not_cornered": combine(not_cornered, nearest_box),
     "walled_distance_sum_and_not_cornered": combine(not_cornered, walled_distance_sum)
 }
