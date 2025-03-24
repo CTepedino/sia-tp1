@@ -31,9 +31,13 @@ if __name__ == "__main__":
 
         if "heuristic" in config:
             heuristic = heuristics[config["heuristic"]]
+        else:
+            heuristic = None
 
         if "depth_iteration" in config:
             depth_iteration = int(config["depth_iteration"])
+        else:
+            depth_iteration = None
 
         method = methods[config["method"]]
 
@@ -42,7 +46,7 @@ if __name__ == "__main__":
         else:
             out_path = f"{config['method']}_result.json"
 
-    results = method(level, heuristic)
+    results = method(level, h=heuristic, d_i=depth_iteration)
 
     with open(out_path, "w") as f:
         json.dump(results.to_dict(), f, ensure_ascii=False, indent=4)
