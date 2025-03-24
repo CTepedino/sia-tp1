@@ -4,7 +4,7 @@ import time
 import sys
 import json
 
-from sokobanRules import SokobanRules, Directions
+from rules import SokobanRules, Directions
 
 
 TILE_SIZE = 50

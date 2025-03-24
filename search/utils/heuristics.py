@@ -1,9 +1,8 @@
-import enum
 import math
 from typing import Callable
 
-from frontierSets import Sorted
-from sokobanRules import GameState
+from .frontierSets import Sorted
+from sokoban.rules import GameState
 
 def misplaced_boxes(state: GameState):
     return sum(1

@@ -1,6 +1,6 @@
 import json
 import sys
-from sokobanGame import Sokoban
+from game import Sokoban
 
 if __name__ == "__main__":
     with open(sys.argv[1], "r") as f:

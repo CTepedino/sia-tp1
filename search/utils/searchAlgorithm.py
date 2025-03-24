@@ -1,7 +1,7 @@
 import time
 
-from frontierSets import Collection
-from sokobanRules import SokobanRules, Directions
+from .frontierSets import Collection
+from sokoban.rules import SokobanRules, Directions
 
 class SearchResults:
     def __init__(self, level: [str], path: [Directions], nodes_expanded: int, nodes_in_frontier: int, time: float):
