@@ -8,6 +8,6 @@
     "#  B T #",
     "########"
     ],
-    "heuristic": "walled_distance_sum",
-    "depth_iteration": 2
+  "method": "a_star",
+  "heuristic": "not_wall_stuck"
 }

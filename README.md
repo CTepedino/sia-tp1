@@ -80,6 +80,9 @@ Al ejecutar un método de búsqueda, el archivo de resultados generado puede usa
 - nearest_box: distancia manhattan del jugador hasta la caja más cercana que no esté en un objetivo
 - walled_distance_sum: suma de longitudes del camino de cada caja al objetivo más cercano, sin poder atravesar paredes
 - not_cornered: detecta deadlocks causados por una caja en una esquina
-- manhattan_distance_sum_and_not_cornered
-- nearest_box_and_not_cornered
-- walled_distance_sum_and_not_cornered
+- no_square_blocks: detecta deadlocks causados por grupos de 2x2 de cajas y paredes
+- not_wall_stuck: detecta deadlocks causados por no poder separar a una caja de una pared
+- avoid_deadlocks: combinación de not_cornered, no_square_blocks y not_wall_stuck
+- nearest_box_adl: combinación de nearest_box y avoid_deadlocks
+- manhattan_distance_sum_adl: combinación de manhattan_distance_sum y avoid_deadlocks
+- walled_distance_sum_adl: combinación de walled_distance_sum y avoid_deadlocks

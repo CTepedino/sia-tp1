@@ -14,6 +14,6 @@
       "# #######   #",
       "#############"
     ],
-    "heuristic": "manhattan_distance_sum",
-    "depth_iteration": 2
+  "method": "a_star",
+  "heuristic": "misplaced_boxes"
 }

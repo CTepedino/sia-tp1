@@ -5,5 +5,6 @@
             "# B T#",
             "######"
         ],
-  "heuristic": "misplaced_boxes"
+  "method": "a_star",
+  "heuristic": "not_wall_stuck"
 }

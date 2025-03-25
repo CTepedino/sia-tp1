@@ -1,6 +1,8 @@
 import math
 from typing import Callable
 
+from fontTools.cu2qu.cli import open_ufo
+
 from .frontierSets import Sorted
 from sokoban.rules import GameState
 
@@ -32,22 +34,134 @@ def nearest_box(state: GameState):
         return 0
     return min(abs(state.player[0] - box[0]) + abs(state.player[1] - box[1]) for box in unplaced_boxes) if unplaced_boxes else 0
 
-
 def not_cornered(state: GameState):
     for box in state.boxes:
-
         if box not in state.targets:
-            up = (box[1], box[0] - 1)
-            down = (box[1], box[0] + 1)
-            right = (box[1] + 1, box[0])
-            left = (box[1] - 1, box[0])
 
-            if (up in state.walls and (left in state.walls or right in state.walls) or
-                    (down in state.walls and (left in state.walls or right in state.walls))):
+            up = (box[0], box[1] - 1) in state.walls
+            down = (box[0], box[1] + 1) in state.walls
+            right = (box[0] + 1, box[1]) in state.walls
+            left = (box[0] - 1, box[1]) in state.walls
+
+            if (up and (left or right) or
+                    (down and (left or right))):
                 return float('inf')
 
 
     return 0
+
+def no_square_blocks(state: GameState):
+    box_and_walls = state.walls.union(state.boxes)
+    for box in state.boxes:
+        if box not in state.targets:
+            up = (box[0], box[1] - 1) in box_and_walls
+            down = (box[0], box[1] + 1) in box_and_walls
+            right = (box[0] + 1, box[1]) in box_and_walls
+            left = (box[0] - 1, box[1]) in box_and_walls
+
+            up_right = (box[0] + 1, box[1] - 1) in box_and_walls
+            up_left = (box[0] - 1 , box[1] - 1) in box_and_walls
+            down_right = (box[0] + 1, box[1] + 1) in box_and_walls
+            down_left = (box[0] - 1 , box[1] + 1) in box_and_walls
+
+            if (
+                    (up and up_right and right) or
+                    (up and up_left and left) or
+                    (down and down_right and right) or
+                    (down and down_left and left)
+            ):
+                return float('inf')
+    return 0
+
+known_stuck_spots = []
+def not_wall_stuck(state: GameState):
+    for box in state.boxes:
+        if box not in state.targets:
+
+            if box in known_stuck_spots:
+                return float('inf')
+
+            up = (box[0], box[1] - 1)
+            down = (box[0], box[1] + 1)
+            right = (box[0] + 1, box[1])
+            left = (box[0] - 1, box[1])
+
+            for direction in [up, down]:
+                if direction not in state.walls:
+                    continue
+                explored = []
+                open_r = True
+                open_l = True
+                dir_r = direction
+                r = box
+                while open_r:
+                    r = (r[0] + 1, r[1])
+                    dir_r = (dir_r[0] + 1, dir_r[1])
+                    explored.append(r)
+                    if r in state.walls:
+                        open_r = False
+                    if r in state.targets:
+                        break
+                    if dir_r not in state.walls:
+                        break
+                dir_l = direction
+                l = box
+                if not open_r:
+                    while open_l:
+                        l = (l[0] - 1, l[1])
+                        dir_l = (dir_l[0] - 1, dir_l[1])
+                        explored.append(l)
+                        if l in state.walls:
+                            open_l = False
+                        if l in state.targets:
+                            break
+                        if dir_l not in state.walls:
+                            break
+                if (not open_l) and (not open_r):
+                    known_stuck_spots.extend(explored)
+                    return float('inf')
+
+            for direction in [left, right]:
+                if direction not in state.walls:
+                    continue
+                explored = []
+                open_u = True
+                open_d = True
+                dir_u = direction
+                u = box
+                while open_u:
+                    u = (u[0], u[1] - 1)
+                    dir_u = (dir_u[0], dir_u[1] - 1)
+                    explored.append(u)
+                    if u in state.walls:
+                        open_u = False
+                    if u in state.targets:
+                        break
+                    if dir_u not in state.walls:
+                        break
+                dir_d = direction
+                d = box
+                if not open_u:
+                    while open_d:
+                        d = (d[0], d[1] + 1)
+                        dir_d = (dir_d[0], dir_d[1] + 1)
+                        explored.append(d)
+                        if d in state.walls:
+                            open_d = False
+                        if d in state.targets:
+                            break
+                        if dir_d not in state.walls:
+                            break
+
+                if (not open_u) and (not open_d):
+                    known_stuck_spots.extend(explored)
+                    return float('inf')
+
+    return 0
+
+
+
+
 
 
 calculated_walled_distances = {}
@@ -97,12 +211,16 @@ def walled_distance_sum(state: GameState):
 
 
 #IMPORTANTE: si se esta usando una heuristica que pueda devolver infinito, mandarla como primer parametro, para no perder tiempo evaluando la segunda heuristica si no hace falta
-def combine(heuristic_1: Callable[[GameState], int], heuristic_2: Callable[[GameState], int]):
+def combine(heuristic_list: [Callable[[GameState], int]]):
     def combination(state: GameState):
-        value1 = heuristic_1(state)
-        if math.isinf(value1):
-            return value1
-        return max(value1, heuristic_2(state))
+        current_max = 0
+        for heuristic in heuristic_list:
+            value = heuristic(state)
+            if math.isinf(value):
+                return value
+            if value > current_max:
+                current_max = value
+        return current_max
 
     return combination
 
@@ -113,7 +231,12 @@ heuristics = {
     "walled_distance_sum": walled_distance_sum,
 
     "not_cornered": not_cornered,
-    "manhattan_distance_sum_and_not_cornered": combine(not_cornered, manhattan_distance_sum),
-    "nearest_box_and_not_cornered": combine(not_cornered, nearest_box),
-    "walled_distance_sum_and_not_cornered": combine(not_cornered, walled_distance_sum)
+    "no_square_blocks": no_square_blocks,
+    "not_wall_stuck": not_wall_stuck,
+
+    "avoid_deadlocks": combine([not_cornered, not_wall_stuck, no_square_blocks]),
+
+    "manhattan_distance_sum_adl": combine([not_cornered, not_wall_stuck, no_square_blocks, manhattan_distance_sum]),
+    "nearest_box_adl": combine([not_cornered, not_wall_stuck, no_square_blocks, nearest_box]),
+    "walled_distance_sum_adl": combine([not_cornered, not_wall_stuck, no_square_blocks, walled_distance_sum])
 }
