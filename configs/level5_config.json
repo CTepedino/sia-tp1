@@ -15,6 +15,6 @@
       "#############"
     ],
   "method": "a_star",
-  "heuristic": "manhattan_distance_sum",
+  "heuristic": "manhattan_distance_sum_adl",
   "out_path": "t1.json"
 }
