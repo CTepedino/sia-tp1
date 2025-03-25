@@ -32,7 +32,7 @@ heuristics = {
     "manhattan_distance_sum_times_5"
 }
 
-def run_experiments(level, methods_to_run, num_runs=50):
+def run_experiments(level, methods_to_run, num_runs=1000):
     results_map = {}
 
     for method_name in methods_to_run:
@@ -42,7 +42,7 @@ def run_experiments(level, methods_to_run, num_runs=50):
             method = methods[method_name]
 
             heuristic = "manhattan_distance_sum" if method_name in ["greedy", "a_star"] else None
-            depth_iteration = (i // 5) + 1 if method_name == "iddfs" else None
+            depth_iteration = (i // 100) + 1 if method_name == "iddfs" else None
 
             # Run the method
             result = method(level, h=heuristic, d_i=depth_iteration)
@@ -73,5 +73,5 @@ if __name__ == "__main__":
     results = run_experiments(level, ["bfs", "dfs", "iddfs"])
     
     # Print or save the results
-    with open(output, "w") as out_file:
+    with open(output+".json", "w") as out_file:
         json.dump(results, out_file, ensure_ascii=False, indent=4)
