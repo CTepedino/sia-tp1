@@ -155,7 +155,7 @@ class Sokoban:
             if has_moves:
                 try:
                     move = next(moves_iter)
-                    time.sleep(0.5)
+                    time.sleep(0.225)
                     self.last_move = Directions(move)
                     self.game.move_to(self.last_move)
 

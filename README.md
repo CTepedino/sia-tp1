@@ -46,7 +46,7 @@ pipenv run python -m sokoban.simulator [configFile]
 
 Los archivos de configuración se leen en formato JSON
 
-El nivel ("level") se describe como una matriz de strings, en donde cada string representa una fila del tablero.
+El nivel ("level") se describe como una lista de strings, en donde cada string representa una fila del tablero.
 
 - \# representa una pared
 - P representa al jugador
