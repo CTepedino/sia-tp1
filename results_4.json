@@ -1,0 +1,1214 @@
+{
+    "bfs": {
+        "executions": [
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.94s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.88s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.97s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.69s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.65s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.74s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.73s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.68s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.65s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.91s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "2.23s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.91s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "2.36s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "2.46s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.68s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.60s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.60s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.66s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.70s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.62s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.57s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.55s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.54s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.58s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.49s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.65s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.64s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.60s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.54s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.58s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.51s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.69s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.68s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.58s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.55s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.56s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.55s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.58s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.63s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.62s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.63s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.59s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.56s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.64s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.60s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.55s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.54s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.57s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.52s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198553,
+                "nodes_in_frontier": 116,
+                "time": "1.51s",
+                "depth": null
+            }
+        ]
+    },
+    "dfs": {
+        "executions": [
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.53s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.54s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.58s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.57s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.57s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.50s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.52s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.53s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.54s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.61s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.85s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.78s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.64s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.59s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.57s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.54s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.54s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.55s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.49s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.50s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.51s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.52s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.53s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.53s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.55s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.48s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.49s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.50s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.49s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.50s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.51s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.53s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.48s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.50s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.48s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.50s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.51s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.53s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.53s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.46s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.46s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.47s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.49s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.58s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.60s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.60s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.47s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.47s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.48s",
+                "depth": null
+            },
+            {
+                "solved": true,
+                "cost": 484,
+                "nodes_expanded": 50784,
+                "nodes_in_frontier": 189,
+                "time": "0.49s",
+                "depth": null
+            }
+        ]
+    },
+    "iddfs": {
+        "executions": [
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198536,
+                "nodes_in_frontier": 104,
+                "time": "1.96s",
+                "depth": 1
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198532,
+                "nodes_in_frontier": 103,
+                "time": "1.90s",
+                "depth": 1
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198534,
+                "nodes_in_frontier": 106,
+                "time": "1.94s",
+                "depth": 1
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198555,
+                "nodes_in_frontier": 111,
+                "time": "1.90s",
+                "depth": 1
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 198565,
+                "nodes_in_frontier": 142,
+                "time": "1.94s",
+                "depth": 1
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55417,
+                "nodes_in_frontier": 8,
+                "time": "0.58s",
+                "depth": 2
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55423,
+                "nodes_in_frontier": 10,
+                "time": "0.54s",
+                "depth": 2
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55399,
+                "nodes_in_frontier": 14,
+                "time": "0.53s",
+                "depth": 2
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55383,
+                "nodes_in_frontier": 13,
+                "time": "0.54s",
+                "depth": 2
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55411,
+                "nodes_in_frontier": 14,
+                "time": "0.49s",
+                "depth": 2
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 57164,
+                "nodes_in_frontier": 15,
+                "time": "0.51s",
+                "depth": 3
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 57199,
+                "nodes_in_frontier": 18,
+                "time": "0.50s",
+                "depth": 3
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 57231,
+                "nodes_in_frontier": 19,
+                "time": "0.50s",
+                "depth": 3
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 57210,
+                "nodes_in_frontier": 19,
+                "time": "0.50s",
+                "depth": 3
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 57257,
+                "nodes_in_frontier": 19,
+                "time": "0.51s",
+                "depth": 3
+            },
+            {
+                "solved": true,
+                "cost": 148,
+                "nodes_expanded": 56114,
+                "nodes_in_frontier": 20,
+                "time": "0.51s",
+                "depth": 4
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 56168,
+                "nodes_in_frontier": 18,
+                "time": "0.49s",
+                "depth": 4
+            },
+            {
+                "solved": true,
+                "cost": 148,
+                "nodes_expanded": 56068,
+                "nodes_in_frontier": 20,
+                "time": "0.52s",
+                "depth": 4
+            },
+            {
+                "solved": true,
+                "cost": 148,
+                "nodes_expanded": 56150,
+                "nodes_in_frontier": 18,
+                "time": "0.49s",
+                "depth": 4
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 56114,
+                "nodes_in_frontier": 20,
+                "time": "0.50s",
+                "depth": 4
+            },
+            {
+                "solved": true,
+                "cost": 146,
+                "nodes_expanded": 56550,
+                "nodes_in_frontier": 16,
+                "time": "0.51s",
+                "depth": 5
+            },
+            {
+                "solved": true,
+                "cost": 149,
+                "nodes_expanded": 56512,
+                "nodes_in_frontier": 18,
+                "time": "0.52s",
+                "depth": 5
+            },
+            {
+                "solved": true,
+                "cost": 147,
+                "nodes_expanded": 56486,
+                "nodes_in_frontier": 12,
+                "time": "0.50s",
+                "depth": 5
+            },
+            {
+                "solved": true,
+                "cost": 153,
+                "nodes_expanded": 56619,
+                "nodes_in_frontier": 23,
+                "time": "0.51s",
+                "depth": 5
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 56615,
+                "nodes_in_frontier": 34,
+                "time": "0.51s",
+                "depth": 5
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55861,
+                "nodes_in_frontier": 25,
+                "time": "0.50s",
+                "depth": 6
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55839,
+                "nodes_in_frontier": 26,
+                "time": "0.51s",
+                "depth": 6
+            },
+            {
+                "solved": true,
+                "cost": 144,
+                "nodes_expanded": 55738,
+                "nodes_in_frontier": 21,
+                "time": "0.53s",
+                "depth": 6
+            },
+            {
+                "solved": true,
+                "cost": 147,
+                "nodes_expanded": 55848,
+                "nodes_in_frontier": 21,
+                "time": "0.53s",
+                "depth": 6
+            },
+            {
+                "solved": true,
+                "cost": 147,
+                "nodes_expanded": 55834,
+                "nodes_in_frontier": 17,
+                "time": "0.55s",
+                "depth": 6
+            },
+            {
+                "solved": true,
+                "cost": 152,
+                "nodes_expanded": 55961,
+                "nodes_in_frontier": 17,
+                "time": "0.56s",
+                "depth": 7
+            },
+            {
+                "solved": true,
+                "cost": 152,
+                "nodes_expanded": 55927,
+                "nodes_in_frontier": 19,
+                "time": "0.54s",
+                "depth": 7
+            },
+            {
+                "solved": true,
+                "cost": 152,
+                "nodes_expanded": 55870,
+                "nodes_in_frontier": 25,
+                "time": "0.52s",
+                "depth": 7
+            },
+            {
+                "solved": true,
+                "cost": 152,
+                "nodes_expanded": 55889,
+                "nodes_in_frontier": 19,
+                "time": "0.53s",
+                "depth": 7
+            },
+            {
+                "solved": true,
+                "cost": 149,
+                "nodes_expanded": 56006,
+                "nodes_in_frontier": 13,
+                "time": "0.56s",
+                "depth": 7
+            },
+            {
+                "solved": true,
+                "cost": 154,
+                "nodes_expanded": 55485,
+                "nodes_in_frontier": 17,
+                "time": "0.57s",
+                "depth": 8
+            },
+            {
+                "solved": true,
+                "cost": 148,
+                "nodes_expanded": 55553,
+                "nodes_in_frontier": 14,
+                "time": "0.56s",
+                "depth": 8
+            },
+            {
+                "solved": true,
+                "cost": 156,
+                "nodes_expanded": 55513,
+                "nodes_in_frontier": 19,
+                "time": "0.56s",
+                "depth": 8
+            },
+            {
+                "solved": true,
+                "cost": 164,
+                "nodes_expanded": 55467,
+                "nodes_in_frontier": 18,
+                "time": "0.55s",
+                "depth": 8
+            },
+            {
+                "solved": true,
+                "cost": 156,
+                "nodes_expanded": 55542,
+                "nodes_in_frontier": 18,
+                "time": "0.56s",
+                "depth": 8
+            },
+            {
+                "solved": true,
+                "cost": 161,
+                "nodes_expanded": 55588,
+                "nodes_in_frontier": 36,
+                "time": "0.51s",
+                "depth": 9
+            },
+            {
+                "solved": true,
+                "cost": 156,
+                "nodes_expanded": 55552,
+                "nodes_in_frontier": 14,
+                "time": "0.52s",
+                "depth": 9
+            },
+            {
+                "solved": true,
+                "cost": 172,
+                "nodes_expanded": 55674,
+                "nodes_in_frontier": 12,
+                "time": "0.50s",
+                "depth": 9
+            },
+            {
+                "solved": true,
+                "cost": 173,
+                "nodes_expanded": 55606,
+                "nodes_in_frontier": 16,
+                "time": "0.51s",
+                "depth": 9
+            },
+            {
+                "solved": true,
+                "cost": 150,
+                "nodes_expanded": 55525,
+                "nodes_in_frontier": 38,
+                "time": "0.50s",
+                "depth": 9
+            },
+            {
+                "solved": true,
+                "cost": 168,
+                "nodes_expanded": 55464,
+                "nodes_in_frontier": 20,
+                "time": "0.51s",
+                "depth": 10
+            },
+            {
+                "solved": true,
+                "cost": 173,
+                "nodes_expanded": 55385,
+                "nodes_in_frontier": 11,
+                "time": "0.51s",
+                "depth": 10
+            },
+            {
+                "solved": true,
+                "cost": 160,
+                "nodes_expanded": 55287,
+                "nodes_in_frontier": 11,
+                "time": "0.50s",
+                "depth": 10
+            },
+            {
+                "solved": true,
+                "cost": 167,
+                "nodes_expanded": 55347,
+                "nodes_in_frontier": 22,
+                "time": "0.50s",
+                "depth": 10
+            },
+            {
+                "solved": true,
+                "cost": 169,
+                "nodes_expanded": 55347,
+                "nodes_in_frontier": 24,
+                "time": "0.51s",
+                "depth": 10
+            }
+        ]
+    }
+}
