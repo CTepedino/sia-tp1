@@ -9,7 +9,7 @@ class SearchResults:
         self.solution = path
         self.nodes_expanded = nodes_expanded
         self.nodes_in_frontier = nodes_in_frontier
-        self.time = f"{time:.2f}s"
+        self.time = f"{time:.6f}s"
 
     def to_dict(self):
         return {
