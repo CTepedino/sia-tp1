@@ -12,6 +12,7 @@ notebook = "*"
 pandas = "*"
 pygame = "*"
 arcade = "*"
+scipy = "*"
 [dev-packages]
 
 [requires]

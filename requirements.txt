@@ -112,3 +112,4 @@ widgetsnbextension==4.0.13; python_version >= '3.7'
 
 arcade~=3.0.2
 pygame~=2.6.1
+numpy~=2.2.4

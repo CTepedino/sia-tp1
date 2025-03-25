@@ -9,6 +9,6 @@
       "#######"
     ],
   "method": "a_star",
-  "heuristic": "avoid_deadlocks",
-  "out_path": "no_dead_c.json"
+  "heuristic": "manhattan_distance_sum_times_5",
+  "out_path": "t2.json"
 }

@@ -1,8 +1,6 @@
 import math
 from typing import Callable
 
-from fontTools.cu2qu.cli import open_ufo
-
 from .frontierSets import Sorted
 from sokoban.rules import GameState
 
@@ -160,10 +158,6 @@ def not_wall_stuck(state: GameState):
     return 0
 
 
-
-
-
-
 calculated_walled_distances = {}
 
 def walled_distance(box, state: GameState):
@@ -210,6 +204,9 @@ def walled_distance_sum(state: GameState):
     return sum(walled_distance(box, state) for box in state.boxes)
 
 
+def manhattan_distance_sum_times_5(state: GameState):
+    return manhattan_distance_sum(state) * 5
+
 #IMPORTANTE: si se esta usando una heuristica que pueda devolver infinito, mandarla como primer parametro, para no perder tiempo evaluando la segunda heuristica si no hace falta
 def combine(heuristic_list: [Callable[[GameState], int]]):
     def combination(state: GameState):
@@ -238,5 +235,7 @@ heuristics = {
 
     "manhattan_distance_sum_adl": combine([not_cornered, not_wall_stuck, no_square_blocks, manhattan_distance_sum]),
     "nearest_box_adl": combine([not_cornered, not_wall_stuck, no_square_blocks, nearest_box]),
-    "walled_distance_sum_adl": combine([not_cornered, not_wall_stuck, no_square_blocks, walled_distance_sum])
+    "walled_distance_sum_adl": combine([not_cornered, not_wall_stuck, no_square_blocks, walled_distance_sum]),
+
+    "manhattan_distance_sum_times_5": manhattan_distance_sum_times_5,
 }
