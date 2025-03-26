@@ -1,6 +1,7 @@
 import sys
 import json
 import time
+import os
 
 from search.utils.heuristics import heuristics
 from search.aStarSearch import a_star
@@ -42,7 +43,7 @@ def run_experiments(level, methods_to_run, num_runs=1000):
             method = methods[method_name]
 
             heuristic = "manhattan_distance_sum" if method_name in ["greedy", "a_star"] else None
-            depth_iteration = (i // 100) + 1 if method_name == "iddfs" else None
+            depth_iteration = 5 if method_name == "iddfs" else None
 
             # Run the method
             result = method(level, h=heuristic, d_i=depth_iteration)
@@ -53,7 +54,7 @@ def run_experiments(level, methods_to_run, num_runs=1000):
                 "nodes_expanded": dict_result["nodes_expanded"],
                 "nodes_in_frontier": dict_result["nodes_in_frontier"],
                 "time": dict_result["time"],
-                "depth":depth_iteration
+                "depth": depth_iteration
             }
             
             executions.append(result_data)
@@ -63,15 +64,17 @@ def run_experiments(level, methods_to_run, num_runs=1000):
     return results_map
 
 if __name__ == "__main__":
-    with open(sys.argv[1], "r") as f:
-        config = json.load(f)
+    input_file = sys.argv[1]
+    file_name = os.path.splitext(os.path.basename(input_file))[0]
+    output_file = f"results_{file_name}_fix_depth.json"
 
+    with open(input_file, "r") as f:
+        config = json.load(f)
         level = config["level"]
-        output = config["output"]
     
     # Run the experiment for BFS, DFS, and IDDFS
     results = run_experiments(level, ["bfs", "dfs", "iddfs"])
     
-    # Print or save the results
-    with open(output+".json", "w") as out_file:
+    # Save the results
+    with open(output_file, "w") as out_file:
         json.dump(results, out_file, ensure_ascii=False, indent=4)
