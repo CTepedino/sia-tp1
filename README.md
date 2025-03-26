@@ -86,4 +86,3 @@ Al ejecutar un método de búsqueda, el archivo de resultados generado puede usa
 - nearest_box_adl: combinación de nearest_box y avoid_deadlocks
 - manhattan_distance_sum_adl: combinación de manhattan_distance_sum y avoid_deadlocks
 - walled_distance_sum_adl: combinación de walled_distance_sum y avoid_deadlocks
-- manhattan_distance_sum_times_5: suma de distancias manhattan, pero multiplicada por 5. No es admisible, pero permite llegar a soluciones más rapido que la versión normal
