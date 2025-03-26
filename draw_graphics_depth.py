@@ -40,7 +40,6 @@ plt.bar([str(d) for d in depths], costs, color="purple")
 plt.ylabel("Costo")
 plt.xlabel("Profundidad (depth)")
 plt.title("Costo del IDDFS en función de la profundidad")
-plt.xticks(rotation=45)  # Inclinar etiquetas del eje X si hay muchas
 
 # Guardar el gráfico
 plt.savefig(output_file)

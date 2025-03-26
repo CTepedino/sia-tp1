@@ -33,6 +33,5 @@ plt.bar([str(d) for d in depths], times, color="orange")
 plt.ylabel("Tiempo de ejecución (s)")
 plt.xlabel("Profundidad (depth)")
 plt.title("Tiempo de ejecución del IDDFS en función de la profundidad")
-plt.xticks(rotation=45)  
 
 plt.savefig(output_file)
