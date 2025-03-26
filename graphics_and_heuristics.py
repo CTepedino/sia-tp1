@@ -22,8 +22,7 @@ heuristics_list = [
     "avoid_deadlocks",
     "nearest_box_adl",
     "manhattan_distance_sum_adl",
-    "walled_distance_sum_adl",
-    "manhattan_distance_sum_times_5"
+    "walled_distance_sum_adl"
 ]
 
 def run_experiments(level, methods_to_run, heuristics_to_use, num_runs=100):
