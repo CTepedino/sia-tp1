@@ -7,7 +7,7 @@ import os
 json_path = sys.argv[1]
 
 file_name = os.path.splitext(os.path.basename(json_path))[0]
-output_file = f"grafico_costos_{file_name}.png"
+output_file = f"fgrafico_costos_por_heuristica{file_name}.png"
 
 with open(json_path, "r") as f:
     data = json.load(f)
@@ -17,12 +17,14 @@ greedy_costs = []
 a_star_costs = []
 
 for heuristic in heuristics:
-    greedy_data = data["greedy"][heuristic]["executions"]
-    a_star_data = data["a_star"][heuristic]["executions"]
+    # greedy_data = data["greedy"][heuristic]["executions"]
+    # a_star_data = data["a_star"][heuristic]["executions"]
 
-    greedy_avg_cost = np.mean([exec_data["cost"] for exec_data in greedy_data])
-    a_star_avg_cost = np.mean([exec_data["cost"] for exec_data in a_star_data])
+    # greedy_avg_cost = np.mean([exec_data["cost"] for exec_data in greedy_data])
+    # a_star_avg_cost = np.mean([exec_data["cost"] for exec_data in a_star_data])
 
+    greedy_avg_cost = data["greedy"][heuristic]["cost_mean"]
+    a_star_avg_cost = data["a_star"][heuristic]["cost_mean"]
     greedy_costs.append(greedy_avg_cost)
     a_star_costs.append(a_star_avg_cost)
 

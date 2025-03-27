@@ -7,22 +7,18 @@ import os
 json_path = sys.argv[1]
 
 file_name = os.path.splitext(os.path.basename(json_path))[0]
-output_file = f"grafico_nodosexp_{file_name}.png"
+output_file = f"fgrafico_nodos_exp_dfs_greedy_{file_name}.png"
 
 with open(json_path, "r") as f:
     data = json.load(f)
 
-methods = [ "dfs", "greedy mispl", "greedy manh", "greedy wall", "greedy nearest"]
+methods = [ "misplaced_boxes", "manhattan_distance_sum", "walled_distance_sum", "nearest_box"]
 methods2 = [ "Dfs", "Greedy \nMisplaced Boxes", "Greedy \nManhattan distance", "Greedy \nWalled distance", "Greedy \nNearest box"]
 
 
-nodes_expanded = {method: [run["nodes_expanded"] for run in data[method]["executions"]] for method in methods}
+means_expanded = [data["dfs"]["nodes_expanded_mean"]] + [data["greedy"][method]["nodes_expanded_mean"] for method in methods]
 
-
-means_expanded = [np.mean(nodes_expanded[method]) for method in methods]
-
-
-x = np.arange(len(methods))
+x = np.arange(len(methods2))
 width = 0.35
 
 plt.figure(figsize=(10, 5))

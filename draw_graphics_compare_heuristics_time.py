@@ -7,7 +7,7 @@ import os
 json_path = sys.argv[1]
 
 file_name = os.path.splitext(os.path.basename(json_path))[0]
-output_file = f"grafico_comparación3_{file_name}.png"
+output_file = f"fgrafico_comparacion_heuristicas{file_name}.png"
 
 with open(json_path, "r") as f:
     data = json.load(f)
@@ -23,10 +23,11 @@ a_star_times = []
 
 for heuristic in heuristics:
 
-    a_star_data = data["a_star"][heuristic]["executions"]
+    # a_star_data = data["a_star"][heuristic]["executions"]
 
 
-    a_star_avg_time = np.mean([float(exec_data["time"].replace("s", "")) for exec_data in a_star_data])
+    # a_star_avg_time = np.mean([float(exec_data["time"].replace("s", "")) for exec_data in a_star_data])
+    a_star_avg_time = data["a_star"][heuristic]["time_mean"]
 
 
     a_star_times.append(a_star_avg_time)

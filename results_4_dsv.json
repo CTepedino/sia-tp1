@@ -1,0 +1,198 @@
+{
+    "bfs": {
+        "cost_mean": 144.0,
+        "cost_std": 0.0,
+        "nodes_expanded_mean": 198553.0,
+        "nodes_expanded_std": 0.0,
+        "time_mean": 1.742248773574829,
+        "time_std": 0.06778985858402713
+    },
+    "dfs": {
+        "cost_mean": 484.0,
+        "cost_std": 0.0,
+        "nodes_expanded_mean": 50784.0,
+        "nodes_expanded_std": 0.0,
+        "time_mean": 0.5705392599105835,
+        "time_std": 0.032694762950077505
+    },
+    "greedy": {
+        "avoid_deadlocks": {
+            "cost_mean": 212.5,
+            "cost_std": 30.63739545065801,
+            "nodes_expanded_mean": 11633.7,
+            "nodes_expanded_std": 1203.1005818301312,
+            "time_mean": 0.18794560432434082,
+            "time_std": 0.014173942060944359
+        },
+                "manhattan_distance_sum": {
+            "cost_mean": 204.8,
+            "cost_std": 13.151425778218876,
+            "nodes_expanded_mean": 55153.6,
+            "nodes_expanded_std": 451.81283735635486,
+            "time_mean": 0.6190682888031006,
+            "time_std": 0.036975708592662346
+        },
+                "manhattan_distance_sum_adl": {
+            "cost_mean": 194.6,
+            "cost_std": 15.25909564816998,
+            "nodes_expanded_mean": 12376.8,
+            "nodes_expanded_std": 238.19017611983915,
+            "time_mean": 0.20858609676361084,
+            "time_std": 0.015322770164171108
+        },
+                "nearest_box": {
+            "cost_mean": 225.6,
+            "cost_std": 35.5758344947803,
+            "nodes_expanded_mean": 53875.9,
+            "nodes_expanded_std": 1801.0021904484179,
+            "time_mean": 0.7197944402694703,
+            "time_std": 0.03616669132602437
+        },
+                "misplaced_boxes": {
+            "cost_mean": 224.6,
+            "cost_std": 32.150272160589864,
+            "nodes_expanded_mean": 53827.5,
+            "nodes_expanded_std": 1404.0594182583584,
+            "time_mean": 0.5843759775161743,
+            "time_std": 0.028728899821542465
+        },
+                "nearest_box_adl": {
+            "cost_mean": 226.8,
+            "cost_std": 17.628386199536248,
+            "nodes_expanded_mean": 13172.7,
+            "nodes_expanded_std": 405.4003083373272,
+            "time_mean": 0.24588923454284667,
+            "time_std": 0.012627577173408004
+        },
+                "no_square_blocks": {
+            "cost_mean": 214.4,
+            "cost_std": 26.2381401779928,
+            "nodes_expanded_mean": 12350.6,
+            "nodes_expanded_std": 1046.378344577142,
+            "time_mean": 0.1706923246383667,
+            "time_std": 0.024941024830405268
+        },
+                "not_cornered": {
+            "cost_mean": 217.4,
+            "cost_std": 35.66566976799959,
+            "nodes_expanded_mean": 19017.8,
+            "nodes_expanded_std": 1877.0114437584018,
+            "time_mean": 0.2239525556564331,
+            "time_std": 0.022236485590152965
+        },
+                "not_wall_stuck": {
+            "cost_mean": 209.6,
+            "cost_std": 26.012304780622575,
+            "nodes_expanded_mean": 52682.3,
+            "nodes_expanded_std": 2444.0723823160392,
+            "time_mean": 0.5855728149414062,
+            "time_std": 0.029833723473595176
+        },
+                "walled_distance_sum_adl": {
+            "cost_mean": 189.6,
+            "cost_std": 11.01998185116473,
+            "nodes_expanded_mean": 12148.4,
+            "nodes_expanded_std": 104.3812243653043,
+            "time_mean": 0.19744651317596434,
+            "time_std": 0.013040855381964058
+        },
+                "walled_distance_sum": {
+            "cost_mean": 200.2,
+            "cost_std": 14.434680460612904,
+            "nodes_expanded_mean": 55039.6,
+            "nodes_expanded_std": 561.728083684624,
+            "time_mean": 0.6083243608474731,
+            "time_std": 0.023275776275197016
+        }
+    },
+        "a_star": {
+        "avoid_deadlocks": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 26612.3,
+            "nodes_expanded_std": 5.780138406647371,
+            "time_mean": 0.40744054317474365,
+            "time_std": 0.015905060124847513
+        },
+                "manhattan_distance_sum": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 83830.3,
+            "nodes_expanded_std": 3.195309061734091,
+            "time_mean": 1.0202443838119506,
+            "time_std": 0.05607610785678876
+        },
+                "manhattan_distance_sum_adl": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 17791.6,
+            "nodes_expanded_std": 1.4966629547095767,
+            "time_mean": 0.303582501411438,
+            "time_std": 0.016465346597365618
+        },
+              "misplaced_boxes": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 146710.1,
+            "nodes_expanded_std": 2.071231517720798,
+            "time_mean": 1.6689257144927978,
+            "time_std": 0.07350567811127696
+        },
+                "nearest_box": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 67489.3,
+            "nodes_expanded_std": 17.26296614142541,
+            "time_mean": 0.8753499746322632,
+            "time_std": 0.04113235074019349
+        },
+                "nearest_box_adl": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 14959.1,
+            "nodes_expanded_std": 8.904493247793498,
+            "time_mean": 0.2699007749557495,
+            "time_std": 0.015080173153934057
+        },
+                "no_square_blocks": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 26612.2,
+            "nodes_expanded_std": 2.4413111231467406,
+            "time_mean": 0.35181317329406736,
+            "time_std": 0.013352094519379899
+        },
+                "not_cornered": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 51706.7,
+            "nodes_expanded_std": 3.001666203960727,
+            "time_mean": 0.5842645645141602,
+            "time_std": 0.050806529886050784
+        },
+                "not_wall_stuck": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 198537.8,
+            "nodes_expanded_std": 2.7856776554368237,
+            "time_mean": 2.1134278059005736,
+            "time_std": 0.13019973340217778
+        },
+                "walled_distance_sum": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 85971.5,
+            "nodes_expanded_std": 3.52845575287547,
+            "time_mean": 1.0726229429244996,
+            "time_std": 0.05306737588839418
+        },
+                "walled_distance_sum_adl": {
+            "cost_mean": 144.0,
+            "cost_std": 0.0,
+            "nodes_expanded_mean": 18063.2,
+            "nodes_expanded_std": 0.7483314773547883,
+            "time_mean": 0.3056486129760742,
+            "time_std": 0.013744664365215533
+        }
+    }
+}

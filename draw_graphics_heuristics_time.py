@@ -7,7 +7,7 @@ import os
 json_path = sys.argv[1]
 
 file_name = os.path.splitext(os.path.basename(json_path))[0]
-output_file = f"grafico_tiempos_{file_name}.png"
+output_file = f"fgrafico_tiempos_por_heuristica_{file_name}.png"
 
 with open(json_path, "r") as f:
     data = json.load(f)
@@ -17,12 +17,15 @@ greedy_times = []
 a_star_times = []
 
 for heuristic in heuristics:
-    greedy_data = data["greedy"][heuristic]["executions"]
-    a_star_data = data["a_star"][heuristic]["executions"]
+    # greedy_data = data["greedy"][heuristic]["executions"]
+    # a_star_data = data["a_star"][heuristic]["executions"]
 
-    greedy_avg_time = np.mean([float(exec_data["time"].replace("s", "")) for exec_data in greedy_data])
-    a_star_avg_time = np.mean([float(exec_data["time"].replace("s", "")) for exec_data in a_star_data])
+    # greedy_avg_time = np.mean([float(exec_data["time"].replace("s", "")) for exec_data in greedy_data])
+    # a_star_avg_time = np.mean([float(exec_data["time"].replace("s", "")) for exec_data in a_star_data])
 
+    greedy_avg_time = data["greedy"][heuristic]["time_mean"]
+    a_star_avg_time = data["a_star"][heuristic]["time_mean"]
+    
     greedy_times.append(greedy_avg_time)
     a_star_times.append(a_star_avg_time)
 
