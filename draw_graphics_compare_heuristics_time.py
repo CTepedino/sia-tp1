@@ -7,17 +7,17 @@ import os
 json_path = sys.argv[1]
 
 file_name = os.path.splitext(os.path.basename(json_path))[0]
-output_file = f"fgrafico_comparacion_heuristicas{file_name}.png"
+output_file = f"fgrafico_comparacion_heuristicas_manhattan_distance_sum_{file_name}.png"
 
 with open(json_path, "r") as f:
     data = json.load(f)
 
-#heuristics = ["manhattan_distance_sum", "manhattan_distance_sum_adl"]
-#heuristics2 = ["Manhattan distance", "Manhattan distance avoid deadlocks"]
-#heuristics = ["nearest_box", "nearest_box_adl"]
-#heuristics2 = ["Nearest box", "Nearest box avoid deadlocks"]
-heuristics = ["walled_distance_sum", "walled_distance_sum_adl"]
-heuristics2 = ["Walled distance sum", "Walled distance sum avoid deadlocks"]
+heuristics = ["manhattan_distance_sum", "manhattan_distance_sum_adl"]
+heuristics2 = ["Manhattan distance", "Manhattan distance avoid deadlocks"]
+# heuristics = ["nearest_box", "nearest_box_adl"]
+# heuristics2 = ["Nearest box", "Nearest box avoid deadlocks"]
+# heuristics = ["walled_distance_sum", "walled_distance_sum_adl"]
+# heuristics2 = ["Walled distance sum", "Walled distance sum avoid deadlocks"]
 
 a_star_times = []
 
