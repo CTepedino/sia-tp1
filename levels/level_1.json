@@ -5,5 +5,7 @@
             "# B T #",
             "#  B T#",
             "#######"
-        ]
+        ],
+        "method": "a_star",
+        "heuristic": "not_wall_stuck"
 }

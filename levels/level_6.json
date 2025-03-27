@@ -14,5 +14,6 @@
       "# #######   #",
       "#############"
     ],
-  "output": "results_5"
+    "method": "a_star",
+    "heuristic": "not_wall_stuck"
 }

@@ -8,5 +8,6 @@
       "#   BT#",
       "#######"
     ],
-  "output": "results_4"
+    "method": "a_star",
+    "heuristic": "not_wall_stuck"
 }
